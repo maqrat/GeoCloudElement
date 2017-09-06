@@ -1,0 +1,92 @@
+.brands-carousel {
+  opacity: 0;
+}
+.container-brands-carousel {
+  height: 130px;
+  background-color: #003169;
+  background-image: url("../img/bg.jpg");
+  color: #fff;
+  background-size: cover;
+  background-position: top;
+  margin-top: -5px;
+  &>.container-fluid {
+    max-width: 1170px;
+  }
+  &:hover {
+    .slick-prev, .slick-next {
+      opacity: .8;
+    }
+  }
+  .slick-prev:before, .slick-next:before {
+    color: #fff!important;
+  }
+  .carousel-caption {
+    text-align: center;
+    top: 0;
+    padding: 0;
+    h1 {
+      font-weight: 700;
+      font-size: 20px;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      text-shadow: none;
+      letter-spacing: 0;
+    }
+  }
+  img {
+    margin: auto;
+    height: 55px;
+    max-width: 149px;
+  }
+  .slick-slide {
+    outline: none !important;
+  }
+  .slick-list {
+    opacity: 0.95;
+  }
+  .slick-dots {
+    li {
+      margin: 0;
+    }
+  }
+  .slick-next {
+    right: -20px;
+  }
+  .slick-prev {
+    left: -20px;
+  }
+  .slick-prev, .slick-next {
+    top: 43%;
+    z-index: 1;
+    .transition(@duration:0.3s, @ease:ease-out);
+  }
+}
+@media (max-width: 500px) {
+  .container-brands-carousel {
+    .carousel-caption {
+      h1 {
+        font-size: 15px;
+      }
+    }
+  }
+}
+//mobile table
+@media (max-width:767px) {
+  .container-brands-carousel {
+    margin-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container-brands-carousel {
+    .slick-prev, .slick-next {
+      opacity: 0;
+    }
+
+    .slick-next {
+      right: 0;
+    }
+    .slick-prev {
+      left: 0;
+    }
+  }
+}
